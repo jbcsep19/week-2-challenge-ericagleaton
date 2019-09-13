@@ -127,7 +127,7 @@ public class Main {
             int veggiesItem = randomVeggieItem.nextInt(veggies.size());
             //System.out.println(veggies.get(veggiesItem));
             if(veggies.get(veggiesItem)== "Veggies: all")
-                countVeggies = 3.0;
+                countVeggies = 2.0;
             else if ( veggies.get(veggiesItem)=="Veggies: no")
                 countVeggies = 0.0;
             else {countVeggies = 1.0;
@@ -170,14 +170,24 @@ public class Main {
             else {countXSourcream = 0.0;
             }
             order.add(xsourcream.get(xSourCreamItem));
-            countsum = countRice + countBeans + countCheese + countSalsa + countVeggies + countXguac + countXqueso + countXSourcream;
+            countsum = countRice + +countMeat + countBeans + countCheese + countSalsa + countVeggies + countXguac + countXqueso + countXSourcream;
+            countsum = (countMeat + countRice + countBeans + countCheese + countSalsa + countVeggies + countXguac + countXqueso + countXSourcream);
 //System.out.println("countsum="+countsum);
 //System.out.println("price="+price);
-            orderTotal = (basePrice+((countMeat  + countBeans + countCheese + countSalsa + countVeggies + countXguac + countXqueso + countXSourcream)* xprice));
+            orderTotal = (basePrice+(countsum* xprice));
  //System.out.println("orderTotal ="+ orderTotal);
             String orderStrTotal = Double.toString(orderTotal);
             order.add("Price: $" + orderStrTotal);
-            System.out.println("Burrito #  " + b + " " + order);
+            System.out.println("Burrito#  " + b + " " + order);
+
+   //         System.out.println("countsum="+countsum);
+           System.out.println("\tTotal Price: " + orderTotal+ "; Base Price :$" +basePrice + "  Extras Total: " + countsum*xprice + "; Total Ingredient Count Is: " +countsum + "| Rice: " + countRice +" Meat: " +countMeat +
+                    " Beans: $"+ countBeans + " Cheese: $" + countCheese + " Salsa: " + countSalsa + " Veggies: " + countVeggies + " Guac: " +countXguac + " Queso: " + countXqueso + " Sour Cream: " + countXSourcream+"\n\n");
+    /*        while (order.size()>11) {
+                order.remove(10);
+            }
+*/
+          // do (if ((order.size())))
         }
    }
 }
