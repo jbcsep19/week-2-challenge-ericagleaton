@@ -175,7 +175,7 @@ public class Main {
             orderTotal = (3+((countMeat  + countBeans + countCheese + countSalsa + countVeggies + countXguac + countXqueso + countXSourcream)* price));
  //System.out.println("orderTotal ="+ orderTotal);
             String orderStrTotal = Double.toString(orderTotal);
-            order.add("Price $ : " + orderStrTotal);
+            order.add("Price: $" + orderStrTotal);
             System.out.println("Burrito #  " + b + " " + order);
         }
    }
