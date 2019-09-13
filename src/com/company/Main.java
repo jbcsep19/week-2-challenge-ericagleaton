@@ -68,7 +68,7 @@ public class Main {
         Collections.addAll(xsourcream, "Sour Cream: yes", "Sour Cream: no");
         double countXSourcream = 0.0;
 
-
+        System.out.println("Your burrito order is as follows: ");
         for(int b = 1; b <=25; b ++) {
             ArrayList<String> order = new ArrayList<>();
             double count = 0.0;
