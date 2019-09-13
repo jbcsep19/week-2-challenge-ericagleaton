@@ -146,7 +146,7 @@ public class Main {
             Random randomXguacItem = new Random();
             int xguacItem = randomXguacItem.nextInt(xguac.size());
             //System.out.println(xguac.get(xguacItem));
-            if(rice.get(xguacItem)== "Guac: yes")
+            if(xguac.get(xguacItem)== "Guac: yes")
                 countXguac = 1.0;
            else {countXguac = 0.0;
             }
