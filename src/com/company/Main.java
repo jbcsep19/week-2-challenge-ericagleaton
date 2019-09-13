@@ -73,8 +73,9 @@ public class Main {
             ArrayList<String> order = new ArrayList<>();
             double count = 0.0;
             double countsum = 0.0;
-            double price = .50;
+            double xprice = .50;
             Random randomRiceItem = new Random();
+            double basePrice = 3.0;
 
 
             int riceItem = randomRiceItem.nextInt(rice.size());
@@ -172,7 +173,7 @@ public class Main {
             countsum = countRice + countBeans + countCheese + countSalsa + countVeggies + countXguac + countXqueso + countXSourcream;
 //System.out.println("countsum="+countsum);
 //System.out.println("price="+price);
-            orderTotal = (3+((countMeat  + countBeans + countCheese + countSalsa + countVeggies + countXguac + countXqueso + countXSourcream)* price));
+            orderTotal = (basePrice+((countMeat  + countBeans + countCheese + countSalsa + countVeggies + countXguac + countXqueso + countXSourcream)* xprice));
  //System.out.println("orderTotal ="+ orderTotal);
             String orderStrTotal = Double.toString(orderTotal);
             order.add("Price: $" + orderStrTotal);
