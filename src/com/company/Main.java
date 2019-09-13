@@ -99,7 +99,7 @@ public class Main {
             else if ( rice.get(riceItem)=="Rice: no")
                 countRice = 0.0;
             else {countRice = 1.0;
-                System.out.println(countRice);
+               // System.out.println(countRice);
             }
 
             order.add(rice.get(riceItem));
@@ -181,7 +181,7 @@ public class Main {
 
             Random randomXsourcreamItem = new Random();
             int xSourCreamItem = randomXsourcreamItem.nextInt(xsourcream.size());
-            System.out.println(xsourcream.get(xSourCreamItem));
+           // System.out.println(xsourcream.get(xSourCreamItem));
             //System.out.println(xsourcream.size());
             if(xsourcream.get(xSourCreamItem)== "Sour Cream: yes")
                 countXSourcream = 1.0;
@@ -192,7 +192,7 @@ public class Main {
             countsum = countRice + countBeans + countCheese + countSalsa + countVeggies + countXguac + countXqueso + countXSourcream;
 //System.out.println("countsum="+countsum);
 //System.out.println("price="+price);
-            orderTotal = (3+(countMeat  + countBeans + countCheese + countSalsa + countVeggies + countXguac + countXqueso + countXSourcream)* price);
+            orderTotal = (3+((countMeat  + countBeans + countCheese + countSalsa + countVeggies + countXguac + countXqueso + countXSourcream)* price));
  //System.out.println("orderTotal ="+ orderTotal);
             String orderStrTotal = Double.toString(orderTotal);
             order.add("Price $ : " + orderStrTotal);
