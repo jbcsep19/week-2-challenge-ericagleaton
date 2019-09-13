@@ -1,7 +1,6 @@
 package com.company;
 /*
 Write a program that will allow a robot to assemble 25 burritos. Use a random generator for each burrito option and build a list of 25 burrito customizations:
-
 Rice: white, brown, none, all
 Meat: chicken, steak, carnidas, chorizo, sofritas, veggies, none, all
 Beans: pinto, black, none
@@ -11,14 +10,8 @@ Cheese: yes/no
 Guac: yes/no
 Queso: yes/no
 Sour cream: yes/no
-
 Randomly generate a number of ingredients per burrito. Each burrito should have a minimum of 5 ingredients and a maximum of 9 ingredients. Save the finished burritos and display the contents.
-
 Calculate and display a price for each burrito. Pricing will be $3.00 plus 0.50 for each additional ingredient.
-
-If you're finished with above before 3pm, modify your program to use methods. For example, you can call a method from main whose sole purpose is to calculate the price of the burrito.
-
-
  */
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,12 +23,11 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         double orderTotal = 0.0;
-        //String orderStrTotal = Double.toString(orderTotal);
         //Rice: white, brown, none, all
         ArrayList<String> rice = new ArrayList<>();
-        Collections.addAll(rice, "Rice: white", "Rice: brown", "Rice: all", "no");
+        Collections.addAll(rice, "Rice: white", "Rice: brown", "Rice: all", "Rice: no");
         double countRice = 0.0;
-        //All
+        //All Counts
         // Rice = 2
         //Meat = 6
         //Beans 2
@@ -76,13 +68,6 @@ public class Main {
         Collections.addAll(xsourcream, "Sour Cream: yes", "Sour Cream: no");
         double countXSourcream = 0.0;
 
-        //All
-        // Rice = 2
-        //Meat = 6
-        //Beans 2
-        //Salsa = 3
-        //Veggie 3
-
 
         for(int b = 1; b <=25; b ++) {
             ArrayList<String> order = new ArrayList<>();
@@ -101,7 +86,6 @@ public class Main {
             else {countRice = 1.0;
                // System.out.println(countRice);
             }
-
             order.add(rice.get(riceItem));
 
 
@@ -113,7 +97,6 @@ public class Main {
             else if ( meat.get(meatItem)=="Meat: no")
                 countMeat = 0.0;
             else {countMeat = 1.0;
-
             }
             order.add(meat.get(meatItem));
 
@@ -125,7 +108,6 @@ public class Main {
             else if ( beans.get(beansItem)=="Beans: no")
                 countBeans = 0.0;
             else {countBeans = 1.0;
-
             }
             order.add(beans.get(beansItem));
 
@@ -175,7 +157,6 @@ public class Main {
             if(xqueso.get(xquesoItem)== "Queso: yes")
                 countXqueso = 1.0;
             else {countXqueso = 0.0;
-
             }
             order.add(xqueso.get(xquesoItem));
 
@@ -186,7 +167,6 @@ public class Main {
             if(xsourcream.get(xSourCreamItem)== "Sour Cream: yes")
                 countXSourcream = 1.0;
             else {countXSourcream = 0.0;
-
             }
             order.add(xsourcream.get(xSourCreamItem));
             countsum = countRice + countBeans + countCheese + countSalsa + countVeggies + countXguac + countXqueso + countXSourcream;
@@ -196,7 +176,6 @@ public class Main {
  //System.out.println("orderTotal ="+ orderTotal);
             String orderStrTotal = Double.toString(orderTotal);
             order.add("Price $ : " + orderStrTotal);
-
             System.out.println("Burrito #  " + b + " " + order);
         }
    }
